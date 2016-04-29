@@ -1,5 +1,4 @@
-%%  EXERCISES 1 & 2
-
+%%  EXERCISES 1 & 2 Perceptrons
 
 set1 = [2,2; -2, 2; 0.5, 1.5];
 set2 = [1, -2; -1, 1; -0.5, -0.5];
@@ -37,7 +36,7 @@ end
 
 plot(allErrors)
 
-%% EXERCISE 3
+%% EXERCISE 3 Greeble Classification with Perceptron
 
 badGreeblesTrain = xlsread('BadGreeblesTraining.xls');
 goodGreeblesTrain = xlsread('GoodGreeblesTraining.xls');
@@ -68,9 +67,23 @@ trainedClassification = W*trainData' + b;
 plot(trainedClassification,'.','MarkerSize',16)
 
 
-%% 
+%% EXERCISE 4: Backpropagation
+NHIDDEN = 1;
+NINP = 3;
+NOUT = 2;
 
+Wh = rand(NHIDDEN,NINP); %weight matrix feeding hidden nodes
+Wo = rand(NOUT, NHIDDEN); %weight matrix feeding output nodes
+bh = zeros(NHIDDEN,1); %bias weights feeding hidden nodes
+bo = zeros(NOUT,1); %bias weights feeding output nodes
+transfer_fn=@(x,alpha) 1./(1+exp(alpha*x));
 
+% Learning rule applied to weights feeding the output nodes (from hidden
+% layer to output layer) will be the non-linear Widrow-Hoff learning rule.
+% From inputs to hidden layer will be __________...
+
+%TODO: Classify the Greebles using the above network and a sigmoid transfer
+%function & backpropagation learning rule. 
 
 
 
