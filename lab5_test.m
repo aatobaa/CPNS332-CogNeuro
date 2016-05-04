@@ -60,7 +60,7 @@ Wh = rand(NHIDDEN,NINP); %weight matrix feeding hidden nodes
 Wo = rand(NOUT, NHIDDEN); %weight matrix feeding output nodes
 bh = zeros(NHIDDEN,1); %bias weights feeding hidden nodes
 bo = zeros(NOUT,1); %bias weights feeding output nodes
-lr = 0.01;
+lr = 0.1;
 transfer_fn=@(x,alpha) 1./(1+exp(alpha*x));
 
 inp_input = trainingData;
