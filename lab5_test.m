@@ -66,7 +66,7 @@ transfer_fn=@(x,alpha) 1./(1+exp(alpha*x));
 inp_input = trainingData;
 
 %Derivations below assume sigmoid transfer fxn with alpha of -1;
-numEpochs = 5000;
+numEpochs = 1000;
 allErrors = [];
 
 numTrainingInput = size(inp_input,2);
